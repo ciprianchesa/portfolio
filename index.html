@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Ciprian Chesa </title>
+    <link rel="stylesheet" href="styles.css">
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    (function() {
+    emailjs.init("user_SHLKn2xBkl3ckoRqEHfkt");
+    })();
+</script>
+
+<script type="text/javascript">
+  window.onload = function() {
+      document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // generate a five digit number for the contact_number variable
+          this.contact_number.value = Math.random() * 100000 | 0;
+          // these IDs from the previous steps
+          emailjs.sendForm('service_gr5y44a', 'template_k1qfiqj', this)
+              .then(function() {
+                  console.log('SUCCESS!');
+              }, function(error) {
+                  console.log('FAILED...', error);
+              });
+              event.target.reset()
+      });
+  }
+</script>
+
+  <script>
+    document.getElementById("EmptyButton").onclick = function() {
+    document.getElementById("sendmessage").innerHTML = "Sent!";
+}
+</script>
+
+
+
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="like_button.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <nav id="navbar">
+        <ul> 
+          <li><a class="nav-link" href="#welcome"><h2 style="color:#000000;">Home</h2></a></li>
+          <li><a class="nav-link" href="#portfolio"><h2 style="color:#000000;">Portfolio</h2></a></li>
+          <li><a class="nav-link" href="#contact"><h2 style="color:#000000;">Contact</h2></a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <div class="container">
+
+    <section id="welcome">
+      <div class="welcome">
+      <h1 style="color:#2C5B8F">Hi, I'm Ciprian Chesa!</h1></div>
+    </section>
+
+    <section id="portfolio">
+      <div class="portfolio" id="portfolio"><h2>My projects</h2></div></section>
+
+    <section id="projects">
+      <div class="project-tile" id="project1">
+            <a href='https://ciprianchesa.ro/luther/' id='profile-link' target='_blank'>
+              <img src='https://i.postimg.cc/15Z4ZryM/luther.png' border='1px' alt='luther'/>
+              <br>Tribute Page - Martin Luther</a></div>
+
+      <div class="project-tile" id="project2">
+        <a href='https://ciprianchesa.ro/kinetoterapie/' id='profile-link' target='_blank'>
+            <img src='https://i.postimg.cc/HkJ2NpnM/kineto.png' border='1px' alt='kineto'/>
+            <br>Landing Page - Kinetoterapie</a></div>
+  
+      <div class="project-tile" id="project3">
+        <a href='https://ciprianchesa.ro/documentation/' id='profile-link' target='_blank'>
+            <img src='https://i.postimg.cc/zGsmH03R/documentation.png' border='1px' alt='documentation'/>
+            <br>Technical Documentation Page - CSS</a></div>
+    </section>
+
+    <section id="contact">
+      <div>
+        <div className="container">
+          <h1 style="color:#05181c">Let's work together or ... just say Hi!</h1>
+          <form className="form-control" id="contact-form" onSubmit={sendEmail}>
+            <div class="contact-form" className="row pt-5 mx-auto">
+              <div>
+                <h1 style="color:#ffffff">Contact me!</h1>
+              </div>  
+              <div>
+                <input type="hidden" name="contact_number" />
+              </div>  
+              <div class="txtb" className="col-8 form-group mx-auto">
+                <input type="text" className="form-control" placeholder="Name" name="user_name" required />
+              </div>
+              <div class="txtb" className="col-8 form-group pt-2 mx-auto">
+                <input type="email" className="form-control" placeholder="Email" name="user_email" required />
+              </div>
+              <div class="txtb" className="col-8 form-group mx-auto">
+                <textarea className="form-control" cols="30" rows="5" placeholder="Your message" name="message"></textarea>
+              </div>
+              <div className="col-8 pt-3 mx-auto">
+                <input type="submit" id="EmptyButton" className="btn btn-success" value="Send" />
+                <p id="sendmessage"></p>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </div>
+  </div>
+
+  <!-- We will put our React component inside this div. -->
+  <div id="like_button_container"></div>
+
+</body>
+</html>
