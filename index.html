@@ -72,46 +72,67 @@
     </section>
 
     <section id="portfolio">
-      <div class="portfolio" id="portfolio"><h2>My projects</h2></div></section>
+      <div class="portfolio" id="portfolio"><h2>My projects</h2></div>
+    </section>
 
     <section id="projects">
       <div class="project-tile" id="project1">
-            <a href='https://ciprianchesa.ro/luther/' id='profile-link' target='_blank'>
-              <img src='https://i.postimg.cc/15Z4ZryM/luther.png' border='1px' alt='luther'/>
-              <br>Tribute Page - Martin Luther</a></div>
+        <a href='https://ciprianchesa.com/luther/' id='profile-link' target='_blank'>
+          <img src='https://i.postimg.cc/15Z4ZryM/luther.png' border='1px' alt='luther'/>
+            <br>Tribute Page - Martin Luther</a>
+      </div>
 
       <div class="project-tile" id="project2">
-        <a href='https://ciprianchesa.ro/kinetoterapie/' id='profile-link' target='_blank'>
-            <img src='https://i.postimg.cc/HkJ2NpnM/kineto.png' border='1px' alt='kineto'/>
-            <br>Landing Page - Kinetoterapie</a></div>
+        <a href='https://ciprianchesa.com/kinetoterapie/' id='profile-link' target='_blank'>
+          <img src='https://i.postimg.cc/HkJ2NpnM/kineto.png' border='1px' alt='kineto'/>
+            <br>Landing Page - Kinetoterapie</a>
+      </div>
   
       <div class="project-tile" id="project3">
-        <a href='https://ciprianchesa.ro/documentation/' id='profile-link' target='_blank'>
-            <img src='https://i.postimg.cc/zGsmH03R/documentation.png' border='1px' alt='documentation'/>
-            <br>Technical Documentation Page - CSS</a></div>
+        <a href='https://ciprianchesa.com/documentation/' id='profile-link' target='_blank'>
+          <img src='https://i.postimg.cc/zGsmH03R/documentation.png' border='1px' alt='documentation'/>
+            <br>Technical Documentation Page - CSS</a>
+      </div>
+
+      <div class="project-tile" id="project4">
+        <a href='https://ciprianchesa.com/documentation/' id='profile-link' target='_blank'>
+          <img src='https://i.postimg.cc/zGsmH03R/documentation.png' border='1px' alt='documentation'/>
+            <br>Technical Documentation Page - CSS</a>
+      </div>
+
+      <div class="project-tile" id="project5">
+        <a href='https://ciprianchesa.com/documentation/' id='profile-link' target='_blank'>
+          <img src='https://i.postimg.cc/zGsmH03R/documentation.png' border='1px' alt='documentation'/>
+            <br>Technical Documentation Page - CSS</a>
+      </div>
     </section>
 
     <section id="contact">
       <div>
         <div className="container">
-          <h1 style="color:#05181c">Let's work together or ... just say Hi!</h1>
+          <h1 style="color:#05181c">Let's work together!</h1>
           <form className="form-control" id="contact-form" onSubmit={sendEmail}>
             <div class="contact-form" className="row pt-5 mx-auto">
               <div>
                 <h1 style="color:#ffffff">Contact me!</h1>
-              </div>  
+              </div> 
+
               <div>
                 <input type="hidden" name="contact_number" />
-              </div>  
+              </div> 
+
               <div class="txtb" className="col-8 form-group mx-auto">
                 <input type="text" className="form-control" placeholder="Name" name="user_name" required />
               </div>
+
               <div class="txtb" className="col-8 form-group pt-2 mx-auto">
                 <input type="email" className="form-control" placeholder="Email" name="user_email" required />
               </div>
+
               <div class="txtb" className="col-8 form-group mx-auto">
                 <textarea className="form-control" cols="30" rows="5" placeholder="Your message" name="message"></textarea>
               </div>
+              
               <div className="col-8 pt-3 mx-auto">
                 <input type="submit" id="EmptyButton" className="btn btn-success" value="Send" />
                 <p id="sendmessage"></p>

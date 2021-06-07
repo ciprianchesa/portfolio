@@ -1,2 +1,2 @@
 # portfolio
-- [Live Preview](https://www.ciprianchesa.com/)
+- [Live Preview](https://ciprianchesa.github.io/portfolio/)
