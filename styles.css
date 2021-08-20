@@ -13,7 +13,7 @@ li {
 }
    
 a  {
-  color: #000;
+  color: rgb(255, 255, 255);
   text-decoration: none;
 }
   
@@ -37,7 +37,7 @@ header {
   display: flex;
   text-align: center;
   justify-content: space-around;
-  background-color: #608FA0;
+  background-color: #116193;
   align-items: center;
 }
   
@@ -101,52 +101,54 @@ nav > ul {
 #welcome {
   
   display: flex;
-  height: 100vh;
+  height: 120vh;
   align-items: center;
   justify-content: center;
-  background-color: #ACADB0;
+  background-image: url('https://i.postimg.cc/7LGG5SGF/portfolio.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
 }
   
 .welcome  {
-  
+  color: #ffffff;
   justify-content: center;
   text-align: center;
   align-items: center;
   font-size: 30px;
+  
 }
   
 #projects {
-  
-  padding-top: 0px;
-  margin-top: 0px;
-  height: 100vh;
+  height: 130vh;
   align-items: center;
   justify-content: center;
-  display: flex;
-  flex-direction: row;
-  background-color: #AFCCE2;
+  background-image: url('https://i.postimg.cc/GhmSZpsB/projects.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+  
 }
   
-.portfolio  {
+.projects  {
   
-  padding-top: 115px;
+  padding-top: 60px;
   justify-content: center;
   text-align: center;
-  align-items: center;
   font-size: 30px;
-  background-color: #AFCCE2;
+  color: #000000;
+
 }
-  
-.project-tile {
+
+#projectsGroup {
   
   display: flex;
-  flex-direction: column;
+  flex-direction: column  ;
   align-items: center;
   text-align: center;
   width: calc(100% / 3);
   height: 100%;
   margin: 25px;
-  margin-top: 65px;
   border-radius: 3px;
 }
   
@@ -178,7 +180,7 @@ nav > ul {
   
 #contact  {
   padding-top: 80px;
-  height: 100vh;
+  height: 110vh;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -244,9 +246,23 @@ body {
   display: block;
   background: #0c5088;
   padding: 14px 0;
+  font-size: 20px;
   color: white;
   text-transform: uppercase;
   cursor: pointer;
   margin-top: 8px;
-  width: 20%;
+  width: 30%;
+}
+
+.fa {
+  padding: 15px;
+  font-size: 36px;
+  width: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px;
+}
+
+.fa:hover {
+    opacity: 0.7;
 }
