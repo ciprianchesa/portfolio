@@ -2,55 +2,17 @@
 <html>
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Ciprian Chesa </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Ciprian Chesa </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-<script type="text/javascript">
-    (function() {
-    emailjs.init("user_SHLKn2xBkl3ckoRqEHfkt");
-    })();
-</script>
-
-<script type="text/javascript">
-  window.onload = function() {
-      document.getElementById('contact-form').addEventListener('submit', function(event) {
-          event.preventDefault();
-          // generate a five digit number for the contact_number variable
-          this.contact_number.value = Math.random() * 100000 | 0;
-          // these IDs from the previous steps
-          emailjs.sendForm('service_gr5y44a', 'template_k1qfiqj', this)
-              .then(function() {
-                  console.log('SUCCESS!');
-              }, function(error) {
-                  console.log('FAILED...', error);
-              });
-              event.target.reset()
-      });
-  }
-</script>
-
-  <script>
-    document.getElementById("EmptyButton").onclick = function() {
-    document.getElementById("sendmessage").innerHTML = "Sent!";
-}
-</script>
-
-
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
 
   <!-- Load React. -->
   <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
   <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-
-  <!-- Load our React component. -->
-  <script src="like_button.js"></script>
-
-  <!-- Load our JavaScript from functions.js. -->
-  <script src="functions.js"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
@@ -61,8 +23,8 @@
     <header id="header">
       <nav id="navbar">
         <ul> 
-          <li><a class="nav-link" href="#welcome"><h2 style="color:#cecece;">Home</h2></a></li>
-          <li><a class="nav-link" href="#projects"><h2 style="color:#cecece;">Projects</h2></a></li>
+          <li><a class="nav-link" href="#welcome"><h2>Home</h2></a></li>
+          <li><a class="nav-link" href="#projects"><h2>Projects</h2></a></li>
           <li><a class="nav-link" href="#contact"><h2 style="color:#cecece;">Contact</h2></a></li>
         </ul>
       </nav>
@@ -102,7 +64,10 @@
     <section id="contact">
       <div>
         <div className="container">
-          <h1 style="color:#05181c">Let's work together!</h1>
+          <div class="contact-title">
+            <h1>Let's work together!</h1>
+          </div>
+          
           <form className="form-control" id="contact-form" onSubmit={sendEmail}>
             <div class="contact-form" className="row pt-5 mx-auto">
               <div>
@@ -135,7 +100,7 @@
         <div>
           <a href="https://www.linkedin.com/in/ciprian-chesa/" class="fa fa-linkedin-square w3-large" target="_blank"></a>
           <a href="https://github.com/ciprianchesa" class="fa fa-github" aria-hidden="true" target="_blank"></a>
-          <a href="mailto:chesa_ciprian@yahoo.com" class="fa fa-envelope" target="_blank"></a>
+          <a href="mailto:cip@ciprianchesa.com" class="fa fa-envelope" target="_blank"></a>
         </div>
       </div>
     </section>
@@ -144,6 +109,10 @@
 
   <!-- We will put our React component inside this div. -->
   <div id="like_button_container"></div>
+
+<script src="functions.js"></script>
+<script src="contactUs.js"></script>
+<script src="like_button.js"></script>
 
 </body>
 </html>
