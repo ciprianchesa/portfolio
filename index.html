@@ -25,13 +25,12 @@
         <ul> 
           <li><a class="nav-link" href="#welcome"><h2>Home</h2></a></li>
           <li><a class="nav-link" href="#projects"><h2>Projects</h2></a></li>
-          <li><a class="nav-link" href="#contact"><h2 style="color:#cecece;">Contact</h2></a></li>
+          <li><a class="nav-link" href="#contact"><h2>Contact</h2></a></li>
         </ul>
       </nav>
     </header>
 
-  <div class="container">
-
+    <div class="container">
     <section id="welcome">
       <div class="welcome">
       <h1>Hi, I'm Ciprian Chesa,</h1>
@@ -62,46 +61,46 @@
     </section>
 
     <section id="contact">
-      <div>
-        <div className="container">
-          <div class="contact-title">
-            <h1>Let's work together!</h1>
-          </div>
+      <div className="container">
+        <div class="contact-title">
+          <h1>Let's work together!</h1>
+        </div>
           
-          <form className="form-control" id="contact-form" onSubmit={sendEmail}>
-            <div class="contact-form" className="row pt-5 mx-auto">
-              <div>
-                <h1 style="color:#ffffff">Contact me!</h1>
-              </div> 
+        <form className="form-control" id="contact-form" onSubmit={sendEmail}>
+          <div class="contact-form" className="row pt-5 mx-auto">
+            <div class="contact-me">
+              <h1>Contact me!</h1>
+            </div> 
 
-              <div>
-                <input type="hidden" name="contact_number" />
-              </div> 
+            <div>
+              <input type="hidden" name="contact_number" />
+            </div> 
 
-              <div class="txtb" className="col-8 form-group mx-auto">
-                <input type="text" className="form-control" placeholder="First Name" name="user_name" required />
-              </div>
-
-              <div class="txtb" className="col-8 form-group pt-2 mx-auto">
-                <input type="email" className="form-control" placeholder="Your Email" name="user_email" required />
-              </div>
-
-              <div class="txtb" className="col-8 form-group mx-auto">
-                <textarea className="form-control" cols="30" rows="5" placeholder="Your message" name="message"></textarea>
-              </div>
-              
-              <div className="col-8 pt-3 mx-auto">
-                <input type="submit" id="EmptyButton" className="btn btn-success" value="Send" />
-                <p id="sendmessage"></p>
-              </div>
+            <div class="txtb" className="col-8 form-group mx-auto">
+              <input type="text" className="form-control" placeholder="First Name" name="user_name" required />
             </div>
-          </form>
-        </div>
+
+            <div class="txtb" className="col-8 form-group pt-2 mx-auto">
+              <input type="email" className="form-control" placeholder="Your Email" name="user_email" required />              
+            </div>
+
+            <div class="txtb" className="col-8 form-group mx-auto">
+              <textarea className="form-control" cols="30" rows="5" placeholder="Your message" name="message"></textarea>
+            </div>
+              
+            <div class="btn" className="col-8 pt-3 mx-auto">
+              <input type="submit" id="EmptyButton" className="btn btn-success" value="Send" />
+            </div>
+          </div>
+        </form>
         <div>
-          <a href="https://www.linkedin.com/in/ciprian-chesa/" class="fa fa-linkedin-square w3-large" target="_blank"></a>
-          <a href="https://github.com/ciprianchesa" class="fa fa-github" aria-hidden="true" target="_blank"></a>
-          <a href="mailto:cip@ciprianchesa.com" class="fa fa-envelope" target="_blank"></a>
+        <p id="sendmessage"></p>
         </div>
+      </div>
+      <div>
+        <a href="https://www.linkedin.com/in/ciprian-chesa/" class="fa fa-linkedin-square w3-large" target="_blank"></a>
+        <a href="https://github.com/ciprianchesa" class="fa fa-github" aria-hidden="true" target="_blank"></a>
+        <a href="mailto:cip@ciprianchesa.com" class="fa fa-envelope" target="_blank"></a>
       </div>
     </section>
   </div>
