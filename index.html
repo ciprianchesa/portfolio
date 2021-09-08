@@ -6,45 +6,41 @@
   <title> Ciprian Chesa </title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
 
-  <!-- Load React. -->
-  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
 </head>
 
 <body>
   <div id="wrapper">
     <header id="header">
-      <nav id="navbar">
-        <ul> 
-          <li><a class="nav-link" href="#welcome"><h2>Home</h2></a></li>
-          <li><a class="nav-link" href="#projects"><h2>Projects</h2></a></li>
-          <li><a class="nav-link" href="#contact"><h2>Contact</h2></a></li>
-        </ul>
-      </nav>
+      <div class="topnav">
+        <nav id="navbar">
+          <ul id="top-menu-bar"> 
+            <li><a href="#" data-id="home">Home</a></li>
+            <li><a href="#" data-id="projects">Projects</a></li>
+            <li><a href="#" data-id="contact">Contact</a></li>
+          </ul>
+        </nav>
+        <a href="javascript:void(0);" class="icon" onclick="mobileNavbar()">
+          <i class="fa fa-bars"></i>
+        </a>
+        </div>
     </header>
 
     <div class="container">
-    <section id="welcome">
+    <section id="home" class="page">
       <div class="welcome">
-      <h1>Hi, I'm Ciprian Chesa,</h1>
-      <h3>Few thinks about me...soon :)</h3></div>
+        <h1>Hi, I'm Ciprian Chesa,</h1>
+        <h3>Few thinks about me...soon :)</h3>
+      </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="page" style="display: none;">
       <div class="projects-title">
-        <h2>My projects</h2></div>
-
-      <div class="projects-group">
-        <a href='https://ciprianchesa.github.io/Pay_Parking_Fee/' id='profile-link' target='_blank'>
-          <img src='https://i.postimg.cc/J43DfXnS/PARKING-FEE-01.jpg' border='1px' alt='parking_fee'/>
-            <h3>Pay Parking Fee (Java Script)</h3></a>
+        <h2>My projects</h2>
       </div>
 
       <div class="projects-group">
@@ -54,13 +50,19 @@
       </div>
 
       <div class="projects-group">
+        <a href='https://ciprianchesa.github.io/Pay_Parking_Fee/' id='profile-link' target='_blank'>
+          <img src='https://i.postimg.cc/J43DfXnS/PARKING-FEE-01.jpg' border='1px' alt='parking_fee'/>
+            <h3>Pay Parking Fee (Java Script)</h3></a>
+      </div>
+
+      <div class="projects-group">
         <a href='https://ciprianchesa.github.io/kineto-site/' id='profile-link' target='_blank'>
           <img src='https://i.postimg.cc/HkJ2NpnM/kineto.png' border='1px' alt='kineto'/>
             <h3>Landing Page - Physical Therapy (HTML & CSS)</h3></a>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="contact" class="page" style="display: none;">
       <div className="container">
         <div class="contact-title">
           <h1>Let's work together!</h1>
@@ -97,21 +99,20 @@
         <p id="sendmessage"></p>
         </div>
       </div>
-      <div>
-        <a href="https://www.linkedin.com/in/ciprian-chesa/" class="fa fa-linkedin-square w3-large" target="_blank"></a>
-        <a href="https://github.com/ciprianchesa" class="fa fa-github" aria-hidden="true" target="_blank"></a>
-        <a href="mailto:cip@ciprianchesa.com" class="fa fa-envelope" target="_blank"></a>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/ciprian-chesa/" target="_blank">
+          <i class="fa fa-linkedin-square w3-large"></i></a>
+
+        <a href="https://github.com/ciprianchesa" target="_blank">
+          <i class="fa fa-github" aria-hidden="true"></i></a>
+
+        <a href="mailto:cip@ciprianchesa.com" target="_blank">
+          <i class="fa fa-envelope"></i></a>
       </div>
     </section>
   </div>
 </div>
 
-  <!-- We will put our React component inside this div. -->
-  <div id="like_button_container"></div>
-
 <script src="functions.js"></script>
-<script src="contactUs.js"></script>
-<script src="like_button.js"></script>
-
 </body>
 </html>
