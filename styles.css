@@ -19,10 +19,6 @@ body {
   padding: 0;
   background-size: cover;
 }
-
-.btn, #EmptyButton {
-  cursor: pointer;
-}
   
 header {
   position: fixed;
@@ -40,6 +36,7 @@ header {
   padding: 0 13px;
   right: 0;
   display: flex;
+  margin: 10px;
   align-items: center;
 }
 
@@ -67,7 +64,7 @@ nav li {
   list-style: none;
 }
   
-@media (max-width: 480px){
+@media (max-width: 800px){
   header {
     flex-wrap: wrap;
     min-height: 50px;
@@ -80,7 +77,7 @@ nav li {
     position: relative;
   }
   
-  .topnav #navbar {
+  #navbar {
     display: none;
   }
   
@@ -122,6 +119,9 @@ nav li {
 
   nav li {
     padding-bottom: 4px;
+    margin-left: 20px;
+    margin-right: 20px;
+    list-style: none;
   }
 }
    
@@ -131,7 +131,7 @@ nav li {
   height: 103.5vh;
   align-items: center;
   justify-content: center;
-  background-image: url('https://i.postimg.cc/7LGG5SGF/portfolio.jpg');
+  background-image: url('img/home.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -145,6 +145,16 @@ nav li {
   font-size: 30px;
 }
   
+#projects {
+  display: block;
+  height: 103.5vh;
+  justify-content: center;
+  background-image: url('/img/projects.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+
 .projects-title {
   padding-top: 90px;
   justify-content: center;
@@ -153,46 +163,39 @@ nav li {
   color: #000000;
 }
 
-#projects {
-  display: block;
+.projects-group-row {
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  background-image: url('https://i.postimg.cc/GhmSZpsB/projects.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;  
-  background-size: cover;
-  height: 103.5vh;
 }
 
-.projects-group {
+.projects-group-column {
   display: flex;
   flex-direction: row;
   align-items: center;
   text-align: center;
-  margin: 10px;
+  margin: 20px;
 }
   
-.projects-group img {
-  width: 20%;
-  height: 20%;
+.projects-group-column img {
+  width: 50%;
+  height: 50%;
   justify-content: center;
   text-align: center;
   opacity: 1.0;
   border: 1px solid #012c78;
 }
 
-.projects-group h3 {
+.projects-group-column h3 {
   color: #000000;
 }
   
-.projects-group img:hover {
+.projects-group-column img:hover {
     opacity: 0.7;
   }
 
-@media (max-width: 480px) {
+@media (max-width: 800px) {
 
   #projects {
-    flex-direction: column;
     height: 100%;
   }
 
@@ -204,7 +207,9 @@ nav li {
     color: #000000;
   }
   
-  .projects-group {
+  .projects-group-column {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     margin: 0 auto;
   }
@@ -232,7 +237,7 @@ nav li {
   justify-content: center;
   text-align: center;
   align-items: center;
-  background-image: url('https://i.postimg.cc/4x116fx8/picture-for-contact-me.jpg');
+  background-image: url('img/contact.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -264,7 +269,7 @@ nav li {
   transform: translate(-50%, 0%);
   left: 50%;
   top: 50%;
-  padding: 30px 40px;
+  padding: 40px 20px;
   box-sizing: border-box;
   font-family: "Gill Sans", sans-serif;
   opacity: 50%;
@@ -304,6 +309,24 @@ nav li {
   justify-content: center;
   font-size: 40px;
   color: rgb(10, 198, 19);
+}
+
+#sendBtn {
+  border: 4px;
+  margin: 4px 2px;
+  background-color: #5ad3e7;
+  border-radius: 3px;
+  padding: 4px 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+}
+  
+#sendBtn > button :hover {
+  background-color: #3264C2;
+  transition: background-color 1s;
 }
 
 .links i {

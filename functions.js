@@ -60,6 +60,18 @@ window.onload = function() {
       });
   }
 
-document.getElementById("EmptyButton").onclick = function() {
-document.getElementById("sendmessage").innerHTML = "You sent the message!";
-}
+//function showTextOnClick() {
+//  document.getElementById("sendmessage").innerHTML = "You sent the message!";
+  //}
+
+// function showTextOnClick() {
+//  const sendBtn = document.getElementById("sendBtn");
+
+// sendBtn.addEventListener("click", ()=>{
+//    if(sendBtn.value === "Send" && email.value === "Email") {
+//      document.getElementById("sendmessage").innerHTML = "You sent the message!";
+//    }else{
+//        sendBtn.value = "Send";
+//    }
+//  })
+//  }

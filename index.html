@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
-  <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
@@ -16,7 +14,6 @@
 <body>
   <div id="wrapper">
     <header id="header">
-      <div class="topnav">
         <nav id="navbar">
           <ul id="top-menu-bar"> 
             <li><a href="#" data-id="home">Home</a></li>
@@ -24,6 +21,7 @@
             <li><a href="#" data-id="contact">Contact</a></li>
           </ul>
         </nav>
+        <div class="topnav">
         <a href="javascript:void(0);" class="icon" onclick="mobileNavbar()">
           <i class="fa fa-bars"></i>
         </a>
@@ -44,23 +42,34 @@
         <h2>My projects</h2>
       </div>
 
-      <div class="projects-group"> 
-        <a href='https://ciprianchesa.github.io/' id='profile-link' target='_blank'>
-          <img src='/img/html_cv.png' alt=''/>
-            <h3>My CV Online (HTML, CSS & JS)</h3></a>
-      </div>
+      <div class="projects-group-row">
+        <div class="projects-group-column">
+          <div>
+            <a href='https://ciprianchesa.github.io/' id='profile-link' target='_blank'>
+            <img src='/img/html_cv.png' alt=''/>
+              <h3>My CV Online (HTML, CSS & JS)</h3></a>
+          </div>
+          <div>
+            <a href='https://ciprianchesa.github.io/Pay_Parking_Fee/' id='profile-link' target='_blank'>
+              <img src='img/pay_parking_fee.png' alt=''/>
+                <h3>Pay Parking Fee (HTML, CSS & JS)</h3></a>
+          </div>
+        </div> 
+        
+        <div class="projects-group-column">
+          <!--<div>
+            <a href='https://ciprianchesa.github.io/Pay_Parking_Fee/' id='profile-link' target='_blank'>
+              <img src='img/pay_parking_fee.png' alt=''/>
+                <h3>Pay Parking Fee (HTML, CSS & JS)</h3></a>
+          </div>
 
-      <div class="projects-group">
-        <a href='https://ciprianchesa.github.io/Pay_Parking_Fee/' id='profile-link' target='_blank'>
-          <img src='img/pay_parking_fee.png' alt=''/>
-            <h3>Pay Parking Fee (HTML, CSS & JS)</h3></a>
+          <div>
+          <a href='https://ciprianchesa.github.io/kineto-site/' id='profile-link' target='_blank'>
+            <img src='https://i.postimg.cc/HkJ2NpnM/kineto.png' alt=''/>
+              <h3>Landing Page - Physical Therapy (HTML & CSS)</h3></a>
+        </div>  -->
+        </div>
       </div>
-
-      <!-- <div class="projects-group">
-        <a href='https://ciprianchesa.github.io/kineto-site/' id='profile-link' target='_blank'>
-          <img src='https://i.postimg.cc/HkJ2NpnM/kineto.png' alt=''/>
-            <h3>Landing Page - Physical Therapy (HTML & CSS)</h3></a>
-      </div> -->
     </section>
 
     <section id="contact" class="page" style="display: none;">
@@ -89,7 +98,7 @@
             </div>
               
             <div class="btn" className="col-8 pt-3 mx-auto">
-              <input type="submit" id="EmptyButton" className="btn btn-success" value="Send" />
+              <input type="submit" id="sendBtn" className="btn btn-success" value="Send" />
             </div>
           </div>
         </form>
