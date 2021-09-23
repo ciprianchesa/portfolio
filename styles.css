@@ -148,6 +148,7 @@ nav li {
 #projects {
   display: block;
   height: 103.5vh;
+  align-items: center;
   justify-content: center;
   background-image: url('/img/projects.jpg');
   background-repeat: no-repeat;
