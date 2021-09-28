@@ -150,7 +150,7 @@ nav li {
   height: 103.5vh;
   align-items: center;
   justify-content: center;
-  background-image: url('/img/projects.jpg');
+  background-image: url('img/projects.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
