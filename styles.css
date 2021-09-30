@@ -187,7 +187,7 @@ nav li {
 }
 
 .projects-group-column h3 {
-  color: #000000;
+  color: #fdfdff;
 }
   
 .projects-group-column img:hover {
@@ -234,7 +234,7 @@ nav li {
 #contact  {
   display: flex;
   flex-direction: column;
-  padding-top: 80px;
+  padding-top: 90px;
   justify-content: center;
   text-align: center;
   align-items: center;
