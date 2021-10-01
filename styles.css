@@ -142,7 +142,9 @@ nav li {
   justify-content: center;
   text-align: center;
   align-items: center;
-  font-size: 30px;
+  font-size: 25px;
+  margin: 100px;
+  padding: 40px;
 }
   
 #projects {
