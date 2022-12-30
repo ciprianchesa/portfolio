@@ -1,11 +1,9 @@
-function mobileNavbar() {
-    var x = document.getElementById("navbar");
-    if (x.style.display === "block") {
-      x.style.display = "none";
-    } else {
-      x.style.display = "block";
-    }
-  }
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
 
 function hide(id) {
   const el = document.getElementById(id)
@@ -51,8 +49,8 @@ window.onload = function() {
           this.contact_number.value = Math.random() * 100000 | 0;
           // these IDs from the previous steps
           emailjs.sendForm('service_gr5y44a', 'template_k1qfiqj', this)
-              .then(function() {
-                  console.log('SUCCESS!');
+              .then(function(response) {
+                  console.log('SUCCESS!', response.status, response.text);
               }, function(error) {
                   console.log('FAILED...', error);
               });
@@ -60,18 +58,18 @@ window.onload = function() {
       });
   }
 
-//function showTextOnClick() {
-//  document.getElementById("sendmessage").innerHTML = "You sent the message!";
-  //}
+/* function showTextOnClick() {
+  document.getElementById("sendmessage").innerHTML = "You sent the message!";
+  }
 
-// function showTextOnClick() {
-//  const sendBtn = document.getElementById("sendBtn");
+ function showTextOnClick() {
+  const sendBtn = document.getElementById("sendBtn");
 
-// sendBtn.addEventListener("click", ()=>{
-//    if(sendBtn.value === "Send" && email.value === "Email") {
-//      document.getElementById("sendmessage").innerHTML = "You sent the message!";
-//    }else{
-//        sendBtn.value = "Send";
-//    }
-//  })
-//  }
+ sendBtn.addEventListener("click", ()=>{
+    if(sendBtn.value === "Send" && email.value === "Email") {
+      document.getElementById("sendmessage").innerHTML = "You sent the message!";
+    }else{
+        sendBtn.value = "Send";
+    }
+  })
+  } */
