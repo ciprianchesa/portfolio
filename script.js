@@ -1,9 +1,16 @@
-const toggleButton = document.getElementsByClassName('toggle-button')[0]
-const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+function toggleCheck() {
+    if(document.getElementById('toggle-button').checked === true){
+        document.getElementsByClassName('navbar-links').style.display = 'block';
+    } else {
+        document.getElementsByClassName('navbar-links').style.display = 'none';
+    }
+}
+// const toggleButton = document.querySelector('#toggle-button');
+// const navbarLinks = document.querySelector('.navbar-links');
 
-toggleButton.addEventListener('click', () => {
-  navbarLinks.classList.toggle('active')
-})
+// toggleButton.addEventListener('click', () => {
+//  navbarLinks.classList.toggle('active')
+// })
 
 function hide(id) {
   const el = document.getElementById(id)
@@ -38,6 +45,62 @@ listenMenuClicks();
 
 showPage("home");
 
+const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const fetch = require('node-fetch');
+
+const app = express();
+
+//Bodyparser Middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+
+//Static folder
+app.use(express.static(path.join(__dirname, 'public')));
+
+//SignUp Route
+app.post('/signup', (req, res) => {
+    const { firstName, lastName, email } = req.body;
+
+    // Make sure fields are filled
+    if (!firstName || !lastName || !email) {
+        res.redirect('/fail.html');
+        return;
+    }
+
+    //Construct req data
+    const data = {
+        members: [
+            {
+                email_address: email,
+                status: 'subscribed',
+                merge_fields: {
+                    FNAME: firstName,
+                    LNAME: lastName
+                }
+            }
+        ]
+    };
+
+    const postData = JSON.stringify(data);
+
+    fetch('https://us2.api.mailchimp.com/3.0/lists/5a43085df3', {
+        method: 'POST',
+        headers: {
+            Authorization: 'auth 0c1b830aa6c92117957be603ae60fa75-us2'
+        },
+        body: postData
+    })
+        .then(res.statusCode === 200 ? 
+            res.redirect('/success.html') :
+            res.redirect('/fail.html'))
+            .catch(err => console.log(err))
+})
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, console.log(`Server started on ${PORT}`));
+
 (function() {
     emailjs.init("user_SHLKn2xBkl3ckoRqEHfkt");
     })();
@@ -58,18 +121,7 @@ window.onload = function() {
       });
   }
 
-/* function showTextOnClick() {
-  document.getElementById("sendmessage").innerHTML = "You sent the message!";
+  function myFunction() {
+    alert("message succesfully sent");
+    window.location.reload();
   }
-
- function showTextOnClick() {
-  const sendBtn = document.getElementById("sendBtn");
-
- sendBtn.addEventListener("click", ()=>{
-    if(sendBtn.value === "Send" && email.value === "Email") {
-      document.getElementById("sendmessage").innerHTML = "You sent the message!";
-    }else{
-        sendBtn.value = "Send";
-    }
-  })
-  } */

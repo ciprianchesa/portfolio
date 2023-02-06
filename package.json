@@ -1,0 +1,29 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "- [Live Preview](https://ciprianchesa.github.io/portfolio/)",
+  "main": "script.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciprianchesa/portfolio.git"
+  },
+  "author": "Ciprian Chesa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ciprianchesa/portfolio/issues"
+  },
+  "homepage": "https://github.com/ciprianchesa/portfolio#readme",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "express": "^4.18.2",
+    "node-fetch": "^3.3.0",
+    "request": "^2.88.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
